@@ -149,7 +149,6 @@ def main() -> int:
 
     ensure_dirs()
     configure_logging(LOG_PATH, cfg.log_level)
-    write_pid(PID_PATH)
     log.info("daemon starting on %s:%s (pid %d)", args.host, cfg.http_port, os.getpid())
 
     state = State()
@@ -214,7 +213,11 @@ def main() -> int:
             "transport": transport,
         }
 
+    # Bind the port BEFORE writing the pid file. If another instance already
+    # owns the port, we want the failure to be loud, not silently leave a
+    # pid file that fools `is_alive()`.
     server = make_server(args.host, cfg.http_port, handler, healthz)
+    write_pid(PID_PATH)
 
     def _shutdown(signum, _frame):
         log.info("signal %d received, stopping", signum)

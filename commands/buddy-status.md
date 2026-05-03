@@ -5,6 +5,8 @@ allowed-tools: Bash
 ---
 
 ```!
+export CLAUDE_PLUGIN_ROOT="${CLAUDE_PLUGIN_ROOT}"
+export CLAUDE_PLUGIN_DATA="${CLAUDE_PLUGIN_DATA}"
 "${CLAUDE_PLUGIN_ROOT}/scripts/status.sh"
 ```
 
