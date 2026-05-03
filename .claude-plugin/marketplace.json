@@ -4,7 +4,10 @@
   "plugins": [
     {
       "name": "buddy-cli-bridge",
-      "source": ".",
+      "source": {
+        "source": "github",
+        "repo": "wuzeyou/buddy-cli-bridge"
+      },
       "description": "Drive the official Claude Hardware Buddy device from Claude Code CLI."
     }
   ]
