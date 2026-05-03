@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "buddy-cli-bridge",
+  "version": "0.1.0",
+  "description": "Drive the official Claude Hardware Buddy device from Claude Code CLI. A BLE bridge daemon that takes over when the desktop app's Hardware Buddy window isn't running.",
+  "author": { "name": "Joe Wu" },
+  "repository": "https://github.com/wuzeyou/buddy-cli-bridge",
+  "license": "MIT",
+  "keywords": ["hardware", "ble", "buddy", "claude-code", "permissions", "m5stick"]
+}

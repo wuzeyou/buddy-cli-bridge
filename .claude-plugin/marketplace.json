@@ -1,0 +1,11 @@
+{
+  "name": "buddy-cli-bridge",
+  "owner": { "name": "Joe Wu" },
+  "plugins": [
+    {
+      "name": "buddy-cli-bridge",
+      "source": ".",
+      "description": "Drive the official Claude Hardware Buddy device from Claude Code CLI."
+    }
+  ]
+}
